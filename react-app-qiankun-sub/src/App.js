@@ -48,7 +48,7 @@ export default function App(props) {
   const onAppendClick = () => {
     props?.store?.setGlobalState({
       user: {
-        name: "button click"
+        name: "update data from sub app"
       }
     });
   };

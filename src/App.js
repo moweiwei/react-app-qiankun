@@ -9,6 +9,8 @@ function App(props) {
   const { loading } = props;
   const [activeUrl, setActiveUrl] = useState(apps?.[0]?.activeRule);
   const storeState = store.getGlobalState();
+
+  console.log("storeState", storeState);
   useEffect(() => {
     const path = window?.location?.pathname;
     const activeMenu = apps.find((item) => path?.includes(item.activeRule));
