@@ -1,0 +1,58 @@
+{
+  "name": "react-app-qiankun-main",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "create-react-app",
+    "qiankun"
+  ],
+  "homepage": "",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.23.6",
+    "classnames": "^2.3.1",
+    "gh-pages": "^3.1.0",
+    "npm-run-all": "^4.1.5",
+    "qiankun": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "app:install": "npm-run-all --serial install:*",
+    "app:run": "npm-run-all --parallel run:*",
+    "app:build": "npm-run-all --parallel build:*",
+    "install:main": "npm install",
+    "install:sub": "cd ./react-app-qiankun-sub && npm install",
+    "run:main": "react-scripts start",
+    "run:sub": "cd ./react-app-qiankun-sub && npm run start",
+    "build:main": "react-scripts build",
+    "build:sub": "cd ./react-app-qiankun-sub && npm run build",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
