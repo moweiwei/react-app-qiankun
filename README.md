@@ -4,7 +4,7 @@ The following commands are batch execution of the main app and sub app.
 
 main app will run at `localhost:1212`; sub app win run at `localhost:2323`
 
-nginx 配置文件位置： `/config/nginx.conf`
+nginx config： `/config/nginx.conf`
 
 ## Install dependencies
 
@@ -30,4 +30,4 @@ nginx 配置文件位置： `/config/nginx.conf`
 
 `docker pull caas4/react-app-qiankun:latest`
 
-`docker run -d --name react-app-qiankun -p 1122:1122 -p 2233:2233 --restart=always -v /Users/moweiwei/github/moweiwei/react-app-qiankun-main/config/nginx.conf:/etc/nginx/nginx.conf react-app-qiankun:latest`
+`docker run -d --name react-app-qiankun -p 1122:1122 -p 2233:2233 --restart=always -v /config/nginx.conf:/etc/nginx/nginx.conf caas4/react-app-qiankun:latest`
