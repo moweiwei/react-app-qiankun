@@ -1,8 +1,12 @@
 import store from "./store/store";
+
 const microApps = [
   {
-    name: "react-app-qiankun-sub22",
-    entry: process.env.REACT_APP_SUB_REACT,
+    name: "react-app-qiankun-sub",
+    entry:
+      process.env.NODE_ENV === "production"
+        ? window._env_.REACT_APP_SUB_REACT
+        : process.env.REACT_APP_SUB_REACT,
     activeRule: "/react",
     container: "#subapp-viewport"
   }

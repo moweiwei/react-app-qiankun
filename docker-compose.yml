@@ -6,6 +6,10 @@ services:
     restart: always
     image: nginx
     container_name: nginx
+    build:
+      context: nginx/
+      args:
+        REACT_APP_SUB_REACT: ${REACT_APP_SUB_REACT}
     ports: 
       - 1122:1122
       - 2233:2233

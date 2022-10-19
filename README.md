@@ -30,4 +30,6 @@ nginx config： `/config/nginx.conf`
 
 `docker pull caas4/react-app-qiankun:latest`
 
-`docker run -d -p 1122:1122 -p 2233:2233  caas4/react-app-qiankun:latest`
+- 参数 `REACT_APP_SUB_REACT` 为子应用服务器地址；端口与 nginx 子应用端口一致，用 `2233`
+
+`docker run -d -p 1122:1122 -p 2233:2233 -e REACT_APP_SUB_REACT=http://172.16.29.94:2233 --restart=always caas4/react-app-qiankun:latest`
