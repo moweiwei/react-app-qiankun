@@ -30,4 +30,4 @@ nginx config： `/config/nginx.conf`
 
 `docker pull caas4/react-app-qiankun:latest`
 
-`docker run -d --name react-app-qiankun -p 1122:1122 -p 2233:2233 --restart=always -v /config/nginx.conf:/etc/nginx/nginx.conf caas4/react-app-qiankun:latest`
+`docker run -d -p 1122:1122 -p 2233:2233  caas4/react-app-qiankun:latest`
