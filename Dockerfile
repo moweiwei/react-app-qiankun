@@ -23,10 +23,6 @@ COPY --from=builder /root/config/nginx.conf /etc/nginx/nginx.conf
 COPY --from=builder /root/build /usr/share/nginx/html/main
 COPY --from=builder /root/react-app-qiankun-sub/build /usr/share/nginx/html/sub
 
-# Default port exposure
-# EXPOSE 1122
-# EXPOSE 2233
-
 # Copy .env file and shell script to container
 WORKDIR /usr/share/nginx/html/main
 COPY ./env.sh .
